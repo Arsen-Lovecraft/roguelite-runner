@@ -17,6 +17,7 @@ warnings/check_invalid_track_paths=false
 config/name="RogueliteRunner"
 run/main_scene="res://_utests_and_debug_instruments/test_player/test.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 
 [autoload]
 

@@ -616,7 +616,7 @@ _data = {
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8wo5y"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_u16v3"]
-graph_offset = Vector2(-714.367, 103.21)
+graph_offset = Vector2(-698.564, 16.9114)
 nodes/AnimationNodeStateMachine/node = ExtResource("10_pfluq")
 nodes/AnimationNodeStateMachine/position = Vector2(-440, 180)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_8wo5y")
@@ -870,15 +870,15 @@ debug_color = Color(0.803922, 0.415686, 0, 0.188235)
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 17)
-scale = Vector2(3, 3)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("2_helvp")
 
 [node name="PlayerSprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 6)
 scale = Vector2(2.75, 2.75)
-texture = ExtResource("2_nrv1g")
-hframes = 6
-frame = 1
+texture = ExtResource("3_6mmwh")
+hframes = 8
+frame = 7
 
 [node name="BloodVFXSprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -905,6 +905,7 @@ parameters/TimeScale/scale = 1.0
 
 [node name="VFXAnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
+deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_x331j")
 }

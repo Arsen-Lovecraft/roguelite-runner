@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddkfhg4jguahn"
-path="res://.godot/imported/Spikes.png-960cfef8edbb05a9d1a3f20184d91f06.ctex"
+uid="uid://blp11gxhg5v5i"
+path="res://.godot/imported/arrow.png-af9c40b335090227900bc7e5c1ee343c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/2 Dungeon Tileset/3 Animated objects/Spikes.png"
-dest_files=["res://.godot/imported/Spikes.png-960cfef8edbb05a9d1a3f20184d91f06.ctex"]
+source_file="res://assets/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-af9c40b335090227900bc7e5c1ee343c.ctex"]
 
 [params]
 
