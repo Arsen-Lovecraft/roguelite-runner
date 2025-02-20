@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RPlayerData" load_steps=2 format=3 uid="uid://c0sqtwgrcpoeq"]
+
+[ext_resource type="Script" path="res://scripts/rplayer_data.gd" id="1_oliq2"]
+
+[resource]
+script = ExtResource("1_oliq2")
+velocity = 150.0
+hp = 2
+steering_velocity = 160.0
+smash_cooldown = 3.0
+smash_power = 2

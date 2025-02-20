@@ -1,0 +1,105 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=30 format=3 uid="uid://c8yj1mffk6yc0"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_145jf"]
+animation = &"death_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y20fv"]
+animation = &"death_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jccnb"]
+animation = &"death_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hyqfi"]
+animation = &"smash_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vhc7w"]
+animation = &"smash_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dr3w2"]
+animation = &"smash_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t2s21"]
+animation = &"steering_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_orp61"]
+animation = &"steering_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d2n34"]
+animation = &"steering_up"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wgby8"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_udfjb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_17nwd"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lysp8"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vlmbt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_asqyo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b07sl"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xqpqm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jjdo6"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r6iu1"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qcnk4"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_co7di"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bnujn"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jnwvk"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hrsll"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vfryt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vd5j3"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mfxwr"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3isiw"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pacl3"]
+switch_mode = 2
+advance_mode = 2
+
+[resource]
+states/End/position = Vector2(1347, 98)
+states/Start/position = Vector2(486, 103)
+states/death_left/node = SubResource("AnimationNodeAnimation_145jf")
+states/death_left/position = Vector2(1176.81, -104.549)
+states/death_right/node = SubResource("AnimationNodeAnimation_y20fv")
+states/death_right/position = Vector2(1176.81, 342.451)
+states/death_up/node = SubResource("AnimationNodeAnimation_jccnb")
+states/death_up/position = Vector2(1189.81, 65.549)
+states/smash_left/node = SubResource("AnimationNodeAnimation_hyqfi")
+states/smash_left/position = Vector2(963.813, 36.451)
+states/smash_right/node = SubResource("AnimationNodeAnimation_vhc7w")
+states/smash_right/position = Vector2(963.813, 205.451)
+states/smash_up/node = SubResource("AnimationNodeAnimation_dr3w2")
+states/smash_up/position = Vector2(963.813, 126.451)
+states/steering_left/node = SubResource("AnimationNodeAnimation_t2s21")
+states/steering_left/position = Vector2(755.813, 3.451)
+states/steering_right/node = SubResource("AnimationNodeAnimation_orp61")
+states/steering_right/position = Vector2(755.813, 220.451)
+states/steering_up/node = SubResource("AnimationNodeAnimation_d2n34")
+states/steering_up/position = Vector2(755.813, 110.451)
+transitions = ["steering_left", "smash_left", SubResource("AnimationNodeStateMachineTransition_wgby8"), "steering_right", "smash_right", SubResource("AnimationNodeStateMachineTransition_udfjb"), "steering_right", "death_right", SubResource("AnimationNodeStateMachineTransition_17nwd"), "smash_right", "death_right", SubResource("AnimationNodeStateMachineTransition_lysp8"), "smash_left", "death_left", SubResource("AnimationNodeStateMachineTransition_vlmbt"), "steering_left", "death_left", SubResource("AnimationNodeStateMachineTransition_asqyo"), "smash_up", "death_up", SubResource("AnimationNodeStateMachineTransition_b07sl"), "steering_up", "death_up", SubResource("AnimationNodeStateMachineTransition_xqpqm"), "steering_up", "smash_up", SubResource("AnimationNodeStateMachineTransition_jjdo6"), "death_left", "End", SubResource("AnimationNodeStateMachineTransition_r6iu1"), "death_up", "End", SubResource("AnimationNodeStateMachineTransition_qcnk4"), "death_right", "End", SubResource("AnimationNodeStateMachineTransition_co7di"), "Start", "steering_up", SubResource("AnimationNodeStateMachineTransition_bnujn"), "steering_up", "steering_left", SubResource("AnimationNodeStateMachineTransition_jnwvk"), "steering_left", "steering_up", SubResource("AnimationNodeStateMachineTransition_hrsll"), "steering_up", "steering_right", SubResource("AnimationNodeStateMachineTransition_vfryt"), "steering_right", "steering_up", SubResource("AnimationNodeStateMachineTransition_vd5j3"), "smash_right", "steering_right", SubResource("AnimationNodeStateMachineTransition_mfxwr"), "smash_left", "steering_left", SubResource("AnimationNodeStateMachineTransition_3isiw"), "smash_up", "steering_up", SubResource("AnimationNodeStateMachineTransition_pacl3")]
+graph_offset = Vector2(103.813, -167.549)

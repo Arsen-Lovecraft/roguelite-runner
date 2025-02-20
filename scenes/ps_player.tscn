@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dabytd6kvn500"]
+[gd_scene load_steps=30 format=3 uid="uid://dabytd6kvn500"]
 
 [ext_resource type="Script" path="res://scenes/ps_player.gd" id="1_2nhf7"]
 [ext_resource type="Texture2D" uid="uid://cds2866uuelrc" path="res://assets/knight/shadow.png" id="2_helvp"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c3h6erp0b3jbd" path="res://assets/knight/smash_up.png" id="7_kj4qc"]
 [ext_resource type="Texture2D" uid="uid://dih3s0l0802g1" path="res://assets/knight/steering_left.png" id="8_jubvx"]
 [ext_resource type="Texture2D" uid="uid://d3os6cnu1b6lu" path="res://assets/knight/blood_up.png" id="10_b4blt"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://c8yj1mffk6yc0" path="res://godot_resources/ps_player_animation_tree.tres" id="10_pfluq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_okrtc"]
 height = 50.0
@@ -612,113 +613,19 @@ _data = {
 "steering_up": SubResource("Animation_c6uo4")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_145jf"]
-animation = &"death_left"
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8wo5y"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y20fv"]
-animation = &"death_right"
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_u16v3"]
+graph_offset = Vector2(-714.367, 103.21)
+nodes/AnimationNodeStateMachine/node = ExtResource("10_pfluq")
+nodes/AnimationNodeStateMachine/position = Vector2(-440, 180)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_8wo5y")
+nodes/TimeScale/position = Vector2(-60, 200)
+nodes/output/position = Vector2(360, 180)
+node_connections = [&"TimeScale", 0, &"AnimationNodeStateMachine", &"output", 0, &"TimeScale"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jccnb"]
-animation = &"death_up"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hyqfi"]
-animation = &"smash_left"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vhc7w"]
-animation = &"smash_right"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dr3w2"]
-animation = &"smash_up"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t2s21"]
-animation = &"steering_left"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_orp61"]
-animation = &"steering_right"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d2n34"]
-animation = &"steering_up"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wgby8"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_udfjb"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_17nwd"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lysp8"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vlmbt"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_asqyo"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b07sl"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xqpqm"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jjdo6"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r6iu1"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qcnk4"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_co7di"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bnujn"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jnwvk"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hrsll"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vfryt"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vd5j3"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mfxwr"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3isiw"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pacl3"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_igvqf"]
-states/End/position = Vector2(1347, 98)
-states/Start/position = Vector2(486, 103)
-states/death_left/node = SubResource("AnimationNodeAnimation_145jf")
-states/death_left/position = Vector2(1176.81, -104.549)
-states/death_right/node = SubResource("AnimationNodeAnimation_y20fv")
-states/death_right/position = Vector2(1176.81, 342.451)
-states/death_up/node = SubResource("AnimationNodeAnimation_jccnb")
-states/death_up/position = Vector2(1189.81, 65.549)
-states/smash_left/node = SubResource("AnimationNodeAnimation_hyqfi")
-states/smash_left/position = Vector2(963.813, 36.451)
-states/smash_right/node = SubResource("AnimationNodeAnimation_vhc7w")
-states/smash_right/position = Vector2(963.813, 205.451)
-states/smash_up/node = SubResource("AnimationNodeAnimation_dr3w2")
-states/smash_up/position = Vector2(963.813, 126.451)
-states/steering_left/node = SubResource("AnimationNodeAnimation_t2s21")
-states/steering_left/position = Vector2(755.813, 3.451)
-states/steering_right/node = SubResource("AnimationNodeAnimation_orp61")
-states/steering_right/position = Vector2(755.813, 220.451)
-states/steering_up/node = SubResource("AnimationNodeAnimation_d2n34")
-states/steering_up/position = Vector2(755.813, 110.451)
-transitions = ["steering_left", "smash_left", SubResource("AnimationNodeStateMachineTransition_wgby8"), "steering_right", "smash_right", SubResource("AnimationNodeStateMachineTransition_udfjb"), "steering_right", "death_right", SubResource("AnimationNodeStateMachineTransition_17nwd"), "smash_right", "death_right", SubResource("AnimationNodeStateMachineTransition_lysp8"), "smash_left", "death_left", SubResource("AnimationNodeStateMachineTransition_vlmbt"), "steering_left", "death_left", SubResource("AnimationNodeStateMachineTransition_asqyo"), "smash_up", "death_up", SubResource("AnimationNodeStateMachineTransition_b07sl"), "steering_up", "death_up", SubResource("AnimationNodeStateMachineTransition_xqpqm"), "steering_up", "smash_up", SubResource("AnimationNodeStateMachineTransition_jjdo6"), "death_left", "End", SubResource("AnimationNodeStateMachineTransition_r6iu1"), "death_up", "End", SubResource("AnimationNodeStateMachineTransition_qcnk4"), "death_right", "End", SubResource("AnimationNodeStateMachineTransition_co7di"), "Start", "steering_up", SubResource("AnimationNodeStateMachineTransition_bnujn"), "steering_up", "steering_left", SubResource("AnimationNodeStateMachineTransition_jnwvk"), "steering_left", "steering_up", SubResource("AnimationNodeStateMachineTransition_hrsll"), "steering_up", "steering_right", SubResource("AnimationNodeStateMachineTransition_vfryt"), "steering_right", "steering_up", SubResource("AnimationNodeStateMachineTransition_vd5j3"), "smash_right", "steering_right", SubResource("AnimationNodeStateMachineTransition_mfxwr"), "smash_left", "steering_left", SubResource("AnimationNodeStateMachineTransition_3isiw"), "smash_up", "steering_up", SubResource("AnimationNodeStateMachineTransition_pacl3")]
-graph_offset = Vector2(69.813, -55.549)
-
-[sub_resource type="Animation" id="Animation_nvcg0"]
-resource_name = "blood_up"
-length = 0.3
+[sub_resource type="Animation" id="Animation_g4p50"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -726,10 +633,10 @@ tracks/0/path = NodePath("BloodVFXSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(-0.0333333),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -738,10 +645,10 @@ tracks/1/path = NodePath("BloodVFXSprite2D:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true, false]
+"values": [false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -753,7 +660,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-8.325, -20.625)]
+"values": [Vector2(21, -17)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -765,7 +672,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.5, 1.5)]
+"values": [Vector2(14.84, -6.94)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -777,7 +684,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("10_b4blt")]
+"values": [ExtResource("4_wjm6y")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -789,7 +696,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.698132]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_fol2a"]
@@ -869,8 +776,9 @@ tracks/5/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_g4p50"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_nvcg0"]
+resource_name = "blood_up"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -878,10 +786,10 @@ tracks/0/path = NodePath("BloodVFXSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.0333333),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -890,10 +798,10 @@ tracks/1/path = NodePath("BloodVFXSprite2D:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [true, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -905,7 +813,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(21, -17)]
+"values": [Vector2(-8.325, -20.625)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -917,7 +825,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(14.84, -6.94)]
+"values": [Vector2(1.5, 1.5)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -929,7 +837,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_wjm6y")]
+"values": [ExtResource("10_b4blt")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -941,7 +849,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [-0.698132]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x331j"]
@@ -991,8 +899,9 @@ playback_auto_capture = false
 [node name="PlayerAnimationTree" type="AnimationTree" parent="."]
 unique_name_in_owner = true
 root_node = NodePath("%PlayerAnimationTree/..")
-tree_root = SubResource("AnimationNodeStateMachine_igvqf")
+tree_root = SubResource("AnimationNodeBlendTree_u16v3")
 anim_player = NodePath("../PlayerAnimationPlayer")
+parameters/TimeScale/scale = 1.0
 
 [node name="VFXAnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
