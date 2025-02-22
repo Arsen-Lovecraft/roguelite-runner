@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0x23x60w60vy"
-path="res://.godot/imported/S_Hurt.png-6f5761e5fabb749fba960b0197f42cb4.ctex"
+uid="uid://cwyy1e5k7t00l"
+path="res://.godot/imported/down_hurt.png-683201a7edb4a20aebcb9f4d21084f85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/S_Hurt.png"
-dest_files=["res://.godot/imported/S_Hurt.png-6f5761e5fabb749fba960b0197f42cb4.ctex"]
+source_file="res://assets/melee_ai/down_hurt.png"
+dest_files=["res://.godot/imported/down_hurt.png-683201a7edb4a20aebcb9f4d21084f85.ctex"]
 
 [params]
 

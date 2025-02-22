@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc88dsaf5gprk"
-path="res://.godot/imported/D_Attack.png-ea9bb119a22591f544401432190cc571.ctex"
+uid="uid://cawdrfth7f8wn"
+path="res://.godot/imported/down_death.png-1798cad7609f7ba19b097eafc0b8dd0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/D_Attack.png"
-dest_files=["res://.godot/imported/D_Attack.png-ea9bb119a22591f544401432190cc571.ctex"]
+source_file="res://assets/melee_ai/down_death.png"
+dest_files=["res://.godot/imported/down_death.png-1798cad7609f7ba19b097eafc0b8dd0c.ctex"]
 
 [params]
 

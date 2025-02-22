@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cds2866uuelrc"
-path="res://.godot/imported/shadow.png-1e26c9cffa567ce1b017927edd074762.ctex"
+uid="uid://cwrn07v8n3l72"
+path="res://.godot/imported/left_idle.png-24e3dc7dc7da1f439ccbdb73972b6867.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/knight/shadow.png"
-dest_files=["res://.godot/imported/shadow.png-1e26c9cffa567ce1b017927edd074762.ctex"]
+source_file="res://assets/melee_ai/left_idle.png"
+dest_files=["res://.godot/imported/left_idle.png-24e3dc7dc7da1f439ccbdb73972b6867.ctex"]
 
 [params]
 

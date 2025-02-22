@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bndhgm2h52r1u"]
 
-[ext_resource type="Script" path="res://scenes/level_run_obstacles/ps_static_obstacle.gd" id="1_61nv2"]
-[ext_resource type="Texture2D" uid="uid://ddkfhg4jguahn" path="res://assets/spike_trap.png" id="2_fe4x5"]
+[ext_resource type="Script" path="res://scenes/level_run_obstacles/not_ai/ps_static_obstacle.gd" id="1_61nv2"]
+[ext_resource type="Texture2D" uid="uid://ddkfhg4jguahn" path="res://assets/sfx_and_traps/spike_trap.png" id="2_fe4x5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1utl5"]
 size = Vector2(71, 74)

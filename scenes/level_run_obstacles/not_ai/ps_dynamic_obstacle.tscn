@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://808w7yxr1j5k"]
 
-[ext_resource type="Script" path="res://scenes/level_run_obstacles/ps_dynamic_obstacle.gd" id="1_a0yjw"]
-[ext_resource type="Texture2D" uid="uid://blp11gxhg5v5i" path="res://assets/arrow.png" id="2_y33ro"]
+[ext_resource type="Script" path="res://scenes/level_run_obstacles/not_ai/ps_dynamic_obstacle.gd" id="1_a0yjw"]
+[ext_resource type="Texture2D" uid="uid://blp11gxhg5v5i" path="res://assets/sfx_and_traps/arrow.png" id="2_y33ro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p21r2"]
 size = Vector2(38, 16)

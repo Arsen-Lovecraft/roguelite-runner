@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f4beyyojchxo"
-path="res://.godot/imported/U_Death.png-370658b9d6c85e1d12f4ff68a32500a3.ctex"
+uid="uid://cds2866uuelrc"
+path="res://.godot/imported/shadow.png-c12fe827637b065bf09452db48f74767.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/U_Death.png"
-dest_files=["res://.godot/imported/U_Death.png-370658b9d6c85e1d12f4ff68a32500a3.ctex"]
+source_file="res://assets/sfx_and_traps/shadow.png"
+dest_files=["res://.godot/imported/shadow.png-c12fe827637b065bf09452db48f74767.ctex"]
 
 [params]
 

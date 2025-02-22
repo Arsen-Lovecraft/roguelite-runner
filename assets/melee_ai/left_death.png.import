@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddkfhg4jguahn"
-path="res://.godot/imported/spike_trap.png-fd8e8c39e2ce7b67a70090bdbf60d5bf.ctex"
+uid="uid://cu14cov32vfrb"
+path="res://.godot/imported/left_death.png-7a2554acd722b5b558e13e7b2916f93c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spike_trap.png"
-dest_files=["res://.godot/imported/spike_trap.png-fd8e8c39e2ce7b67a70090bdbf60d5bf.ctex"]
+source_file="res://assets/melee_ai/left_death.png"
+dest_files=["res://.godot/imported/left_death.png-7a2554acd722b5b558e13e7b2916f93c.ctex"]
 
 [params]
 

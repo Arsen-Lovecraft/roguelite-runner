@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blp11gxhg5v5i"
-path="res://.godot/imported/arrow.png-af9c40b335090227900bc7e5c1ee343c.ctex"
+uid="uid://b662c2aogwwna"
+path="res://.godot/imported/up_hurt.png-dbb9f46dd61db4ec7db29ca41a7e4f10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-af9c40b335090227900bc7e5c1ee343c.ctex"]
+source_file="res://assets/melee_ai/up_hurt.png"
+dest_files=["res://.godot/imported/up_hurt.png-dbb9f46dd61db4ec7db29ca41a7e4f10.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cquqx4dglea4u"
-path="res://.godot/imported/D_Walk.png-f8e91026cb50202d37231ca703ec58df.ctex"
+uid="uid://d3os6cnu1b6lu"
+path="res://.godot/imported/blood_up.png-cfc40fc5d7190709df761c68d07666ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/D_Walk.png"
-dest_files=["res://.godot/imported/D_Walk.png-f8e91026cb50202d37231ca703ec58df.ctex"]
+source_file="res://assets/sfx_and_traps/blood_up.png"
+dest_files=["res://.godot/imported/blood_up.png-cfc40fc5d7190709df761c68d07666ff.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwrn07v8n3l72"
-path="res://.godot/imported/S_Idle.png-4988c83cc536d830100289cfa71d150f.ctex"
+uid="uid://v6iaepab1s7n"
+path="res://.godot/imported/left_walk.png-deeaec0d2b61ae4187e9fec51d0c7e32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/S_Idle.png"
-dest_files=["res://.godot/imported/S_Idle.png-4988c83cc536d830100289cfa71d150f.ctex"]
+source_file="res://assets/melee_ai/left_walk.png"
+dest_files=["res://.godot/imported/left_walk.png-deeaec0d2b61ae4187e9fec51d0c7e32.ctex"]
 
 [params]
 

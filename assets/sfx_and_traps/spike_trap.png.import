@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v6iaepab1s7n"
-path="res://.godot/imported/S_Walk.png-e6df71618cbfeda256ce882277a11b9a.ctex"
+uid="uid://ddkfhg4jguahn"
+path="res://.godot/imported/spike_trap.png-1e2471fb067798b8b81a617161425e2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/S_Walk.png"
-dest_files=["res://.godot/imported/S_Walk.png-e6df71618cbfeda256ce882277a11b9a.ctex"]
+source_file="res://assets/sfx_and_traps/spike_trap.png"
+dest_files=["res://.godot/imported/spike_trap.png-1e2471fb067798b8b81a617161425e2b.ctex"]
 
 [params]
 

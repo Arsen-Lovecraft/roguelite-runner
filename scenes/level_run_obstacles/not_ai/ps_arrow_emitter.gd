@@ -19,7 +19,7 @@ var respawn_cooldown: float = 2.0:
 			respawn_cooldown = value
 		_cooldown.wait_time = value
 
-var _arrows_ps: PackedScene = preload("res://scenes/level_run_obstacles/ps_dynamic_obstacle.tscn")
+var _arrows_ps: PackedScene = preload("res://scenes/level_run_obstacles/not_ai/ps_dynamic_obstacle.tscn")
 var _start_position: Vector2
 var _end_position: Vector2
 var _direction: Vector2

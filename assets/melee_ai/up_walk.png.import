@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2saqr3cxydhq"
-path="res://.godot/imported/U_Walk.png-29aa27f5721624125dae20715fefc279.ctex"
+path="res://.godot/imported/up_walk.png-eaeee6eb0525149bd87e2c4b208eb96f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/U_Walk.png"
-dest_files=["res://.godot/imported/U_Walk.png-29aa27f5721624125dae20715fefc279.ctex"]
+source_file="res://assets/melee_ai/up_walk.png"
+dest_files=["res://.godot/imported/up_walk.png-eaeee6eb0525149bd87e2c4b208eb96f.ctex"]
 
 [params]
 

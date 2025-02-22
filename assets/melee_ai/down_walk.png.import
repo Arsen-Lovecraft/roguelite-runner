@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu14cov32vfrb"
-path="res://.godot/imported/S_Death.png-439eefb668cd6aedc0c4eaec2661a7ea.ctex"
+uid="uid://cquqx4dglea4u"
+path="res://.godot/imported/down_walk.png-addff4e318711f01fc55c7e0e61ced07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/S_Death.png"
-dest_files=["res://.godot/imported/S_Death.png-439eefb668cd6aedc0c4eaec2661a7ea.ctex"]
+source_file="res://assets/melee_ai/down_walk.png"
+dest_files=["res://.godot/imported/down_walk.png-addff4e318711f01fc55c7e0e61ced07.ctex"]
 
 [params]
 
