@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wimjxy8dovy1"
-path="res://.godot/imported/D_Death.png-f5854689228b65eccc88e9cd126ab72e.ctex"
+path="res://.godot/imported/down_death.png-e209abd913ebe510e053ce758c14728b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/4/D_Death.png"
-dest_files=["res://.godot/imported/D_Death.png-f5854689228b65eccc88e9cd126ab72e.ctex"]
+source_file="res://assets/mage_ai/down_death.png"
+dest_files=["res://.godot/imported/down_death.png-e209abd913ebe510e053ce758c14728b.ctex"]
 
 [params]
 

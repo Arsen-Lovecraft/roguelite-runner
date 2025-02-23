@@ -1,5 +1,5 @@
-class_name IDangerousArea2D
-extends Area2D
+class_name RDamageTrait
+extends Resource
 
 signal player_damaged(damage: float)
 
