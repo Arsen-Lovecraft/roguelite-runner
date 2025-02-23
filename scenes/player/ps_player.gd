@@ -1,6 +1,10 @@
 class_name Player
 extends CharacterBody2D
 
+signal moved_right()
+signal moved_left()
+signal smashed()
+
 var player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 @onready var smash_area_2d: SmashArea2D = %SmashArea2D
 
@@ -31,9 +35,11 @@ func _handle_steering() -> void:
 	if(Input.is_action_pressed("turn_right")):
 		if(player_data.steering_velocity > velocity.x):
 			velocity += Vector2(player_data.steering_velocity/5, 0)
+			moved_right.emit()
 	elif(Input.is_action_pressed("turn_left")):
 		if(player_data.steering_velocity > -velocity.x):
 			velocity += Vector2(-player_data.steering_velocity/5, 0)
+			moved_left.emit()
 	else:
 		if(abs(velocity.x) > 1):
 			velocity.x = lerp(velocity.x, 0.0, 0.15)
@@ -49,6 +55,7 @@ func _handle_smashing() -> void:
 			self.global_position = lerp(self.global_position,closest_enemy.global_position,0.95)
 			closest_enemy.queue_free()
 			player_data.velocity += 15
+			smashed.emit()
 
 func _on_player_dead() -> void:
 	player_data.velocity = 0
