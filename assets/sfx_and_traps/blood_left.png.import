@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmxtyvxxnhvfs"
-path="res://.godot/imported/U_Attack.png-0e09a86ab18ced1f63fc4fdb796dddfe.ctex"
+uid="uid://c8q7x28hyquhq"
+path="res://.godot/imported/blood_left.png-93920dbafa5f1738643199d5390075a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/U_Attack.png"
-dest_files=["res://.godot/imported/U_Attack.png-0e09a86ab18ced1f63fc4fdb796dddfe.ctex"]
+source_file="res://assets/sfx_and_traps/blood_left.png"
+dest_files=["res://.godot/imported/blood_left.png-93920dbafa5f1738643199d5390075a3.ctex"]
 
 [params]
 

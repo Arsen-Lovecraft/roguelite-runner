@@ -1,16 +1,18 @@
-[gd_scene load_steps=30 format=3 uid="uid://dabytd6kvn500"]
+[gd_scene load_steps=33 format=3 uid="uid://dabytd6kvn500"]
 
 [ext_resource type="Script" path="res://scenes/ps_player.gd" id="1_2nhf7"]
-[ext_resource type="Texture2D" uid="uid://cds2866uuelrc" path="res://assets/knight/shadow.png" id="2_helvp"]
+[ext_resource type="Texture2D" uid="uid://cds2866uuelrc" path="res://assets/sfx_and_traps/shadow.png" id="2_helvp"]
 [ext_resource type="Texture2D" uid="uid://dqs240qimi3x1" path="res://assets/knight/steering_up.png" id="2_nrv1g"]
 [ext_resource type="Texture2D" uid="uid://cnqnvmdpm8r7u" path="res://assets/knight/death_left.png" id="3_6mmwh"]
-[ext_resource type="Texture2D" uid="uid://c8q7x28hyquhq" path="res://assets/knight/blood_left.png" id="4_wjm6y"]
+[ext_resource type="Texture2D" uid="uid://c8q7x28hyquhq" path="res://assets/sfx_and_traps/blood_left.png" id="4_wjm6y"]
 [ext_resource type="Texture2D" uid="uid://cqglkfdh0qhv7" path="res://assets/knight/death_up.png" id="5_0ldkv"]
 [ext_resource type="Texture2D" uid="uid://cj24r1hnuuhbp" path="res://assets/knight/smash_left.png" id="6_f1pvw"]
 [ext_resource type="Texture2D" uid="uid://c3h6erp0b3jbd" path="res://assets/knight/smash_up.png" id="7_kj4qc"]
 [ext_resource type="Texture2D" uid="uid://dih3s0l0802g1" path="res://assets/knight/steering_left.png" id="8_jubvx"]
-[ext_resource type="Texture2D" uid="uid://d3os6cnu1b6lu" path="res://assets/knight/blood_up.png" id="10_b4blt"]
-[ext_resource type="AnimationNodeStateMachine" uid="uid://c8yj1mffk6yc0" path="res://godot_resources/ps_player_animation_tree.tres" id="10_pfluq"]
+[ext_resource type="Texture2D" uid="uid://d3os6cnu1b6lu" path="res://assets/sfx_and_traps/blood_up.png" id="10_b4blt"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://c8yj1mffk6yc0" path="res://godot_resources/animations_state_machines/ps_player_animation_tree.tres" id="10_pfluq"]
+[ext_resource type="Script" path="res://scenes/ps_player_animation_tree.gd" id="11_5s1ih"]
+[ext_resource type="Script" path="res://scenes/smash_area_2d.gd" id="13_rl05o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_okrtc"]
 height = 50.0
@@ -616,7 +618,7 @@ _data = {
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8wo5y"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_u16v3"]
-graph_offset = Vector2(-714.367, 103.21)
+graph_offset = Vector2(-698.564, 16.9114)
 nodes/AnimationNodeStateMachine/node = ExtResource("10_pfluq")
 nodes/AnimationNodeStateMachine/position = Vector2(-440, 180)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_8wo5y")
@@ -859,6 +861,10 @@ _data = {
 "blood_up": SubResource("Animation_nvcg0")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4yhl"]
+radius = 32.0
+height = 110.0
+
 [node name="PlayerBody2D" type="CharacterBody2D"]
 collision_mask = 30
 motion_mode = 1
@@ -878,7 +884,6 @@ position = Vector2(1, 6)
 scale = Vector2(2.75, 2.75)
 texture = ExtResource("2_nrv1g")
 hframes = 6
-frame = 1
 
 [node name="BloodVFXSprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -897,14 +902,25 @@ libraries = {
 playback_auto_capture = false
 
 [node name="PlayerAnimationTree" type="AnimationTree" parent="."]
-unique_name_in_owner = true
-root_node = NodePath("%PlayerAnimationTree/..")
 tree_root = SubResource("AnimationNodeBlendTree_u16v3")
 anim_player = NodePath("../PlayerAnimationPlayer")
 parameters/TimeScale/scale = 1.0
+script = ExtResource("11_5s1ih")
 
 [node name="VFXAnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
+deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_x331j")
 }
+
+[node name="SmashArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -27)
+collision_layer = 2147483648
+collision_mask = 8
+script = ExtResource("13_rl05o")
+
+[node name="SmashCollisionShape2D" type="CollisionShape2D" parent="SmashArea2D"]
+position = Vector2(0, -25)
+shape = SubResource("CapsuleShape2D_k4yhl")

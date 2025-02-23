@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2saqr3cxydhq"
-path="res://.godot/imported/U_Walk.png-29aa27f5721624125dae20715fefc279.ctex"
+uid="uid://cawdrfth7f8wn"
+path="res://.godot/imported/down_death.png-1798cad7609f7ba19b097eafc0b8dd0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/U_Walk.png"
-dest_files=["res://.godot/imported/U_Walk.png-29aa27f5721624125dae20715fefc279.ctex"]
+source_file="res://assets/melee_ai/down_death.png"
+dest_files=["res://.godot/imported/down_death.png-1798cad7609f7ba19b097eafc0b8dd0c.ctex"]
 
 [params]
 

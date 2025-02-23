@@ -17,6 +17,7 @@ warnings/check_invalid_track_paths=false
 config/name="RogueliteRunner"
 run/main_scene="res://_utests_and_debug_instruments/test_player/test.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 
 [autoload]
 
@@ -24,6 +25,7 @@ EventBus="*res://scripts/autoload/event_bus.gd"
 Global="*res://scripts/autoload/global.gd"
 SoundManager="*res://scripts/autoload/sound_manager.gd"
 SceneManager="*res://scripts/autoload/scene_manager.gd"
+Utility="*res://scripts/autoload/utility_script.gd"
 
 [debug]
 
@@ -82,6 +84,7 @@ smash={
 2d_physics/layer_3="obstacle"
 2d_physics/layer_4="enemy"
 2d_physics/layer_5="damage_obstacle"
+2d_physics/layer_32="smash_area"
 
 [rendering]
 

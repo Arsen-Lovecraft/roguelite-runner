@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3os6cnu1b6lu"
-path="res://.godot/imported/blood_up.png-b14c37ff2226a02686364dce57a95901.ctex"
+uid="uid://cpoueqdpp0rk2"
+path="res://.godot/imported/down_idle.png-f767cb8b28d5067549af6b1ea0694868.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/knight/blood_up.png"
-dest_files=["res://.godot/imported/blood_up.png-b14c37ff2226a02686364dce57a95901.ctex"]
+source_file="res://assets/melee_ai/down_idle.png"
+dest_files=["res://.godot/imported/down_idle.png-f767cb8b28d5067549af6b1ea0694868.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddkfhg4jguahn"
-path="res://.godot/imported/Spikes.png-960cfef8edbb05a9d1a3f20184d91f06.ctex"
+uid="uid://b7p01t1g8a42a"
+path="res://.godot/imported/left_attack.png-ae3e6d732303b050c785bd315c16bc12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/2 Dungeon Tileset/3 Animated objects/Spikes.png"
-dest_files=["res://.godot/imported/Spikes.png-960cfef8edbb05a9d1a3f20184d91f06.ctex"]
+source_file="res://assets/melee_ai/left_attack.png"
+dest_files=["res://.godot/imported/left_attack.png-ae3e6d732303b050c785bd315c16bc12.ctex"]
 
 [params]
 

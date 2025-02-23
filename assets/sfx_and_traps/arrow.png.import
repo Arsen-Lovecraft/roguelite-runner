@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b662c2aogwwna"
-path="res://.godot/imported/U_Hurt.png-eefa7313dfa8d57c62051e5c0b892bc3.ctex"
+uid="uid://blp11gxhg5v5i"
+path="res://.godot/imported/arrow.png-85c3bc9e667cce0f0bbd4d1fa42258e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/1/U_Hurt.png"
-dest_files=["res://.godot/imported/U_Hurt.png-eefa7313dfa8d57c62051e5c0b892bc3.ctex"]
+source_file="res://assets/sfx_and_traps/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-85c3bc9e667cce0f0bbd4d1fa42258e4.ctex"]
 
 [params]
 
