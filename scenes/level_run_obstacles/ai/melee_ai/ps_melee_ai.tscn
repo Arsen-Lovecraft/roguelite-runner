@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dlobfbh10chdr"]
 
-[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/ps_melee_ai.gd" id="1_m7l44"]
+[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/melee_ai/ps_melee_ai.gd" id="1_m7l44"]
 [ext_resource type="Texture2D" uid="uid://v6iaepab1s7n" path="res://assets/melee_ai/left_walk.png" id="2_teahl"]
-[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/ps_melee_ai_animation_tree.gd" id="7_1yht1"]
+[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/melee_ai/ps_melee_ai_animation_tree.gd" id="7_1yht1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kuj8"]
 radius = 11.9996

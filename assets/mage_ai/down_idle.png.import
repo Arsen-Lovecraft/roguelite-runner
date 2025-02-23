@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuv051mxofxsj"
-path="res://.godot/imported/D_Hurt.png-8c7cd6062b2b4412ae88edc7323160f7.ctex"
+uid="uid://b1iebairoj1lx"
+path="res://.godot/imported/down_idle.png-72a815ba2bb78a658f8f5dfe20e3e499.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/4/D_Hurt.png"
-dest_files=["res://.godot/imported/D_Hurt.png-8c7cd6062b2b4412ae88edc7323160f7.ctex"]
+source_file="res://assets/mage_ai/down_idle.png"
+dest_files=["res://.godot/imported/down_idle.png-72a815ba2bb78a658f8f5dfe20e3e499.ctex"]
 
 [params]
 
