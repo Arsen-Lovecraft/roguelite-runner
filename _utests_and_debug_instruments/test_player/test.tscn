@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://dns1bkim0pixm"]
 
-[ext_resource type="PackedScene" uid="uid://dabytd6kvn500" path="res://scenes/ps_player.tscn" id="1_fm5jw"]
+[ext_resource type="PackedScene" uid="uid://dabytd6kvn500" path="res://scenes/player/ps_player.tscn" id="1_fm5jw"]
 [ext_resource type="TileSet" uid="uid://cwr71gvv4tmhb" path="res://_utests_and_debug_instruments/test_assets/2 Dungeon Tileset/1 Tiles/dungeon_tile_set.tres" id="2_ggf26"]
 [ext_resource type="PackedScene" uid="uid://bndhgm2h52r1u" path="res://scenes/level_run_obstacles/not_ai/ps_static_obstacle.tscn" id="3_llcpi"]
 [ext_resource type="PackedScene" uid="uid://c0k8e67unybtf" path="res://scenes/level_run_obstacles/not_ai/ps_arrow_emitter.tscn" id="3_vy51h"]

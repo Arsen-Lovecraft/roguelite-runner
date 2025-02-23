@@ -1,7 +1,9 @@
 class_name StaticObstacle
-extends IDangerousArea2D
+extends Area2D
 
 @onready var _static_obstacle_animation_player: AnimationPlayer = %StaticObstacleAnimationPlayer
+
+@onready var damage_trait: RDamageTrait = RDamageTrait.new().duplicate()
 
 func  _ready() -> void:
 	_connect_signals()
@@ -16,8 +18,8 @@ func _activate_trap() -> void:
 func _try_damage_player() -> void:
 	for i: Node2D in self.get_overlapping_bodies():
 		if(i is Player):
-			player_damaged.emit(damage)
-			EventBus.player_damaged.emit(damage)
+			damage_trait.player_damaged.emit(damage_trait.damage)
+			EventBus.player_damaged.emit(damage_trait.damage)
 
 func _on_body_entered(body: Node2D) -> void:
 	if( body is Player):

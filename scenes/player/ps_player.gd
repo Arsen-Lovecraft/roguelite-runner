@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-var player_data: RPlayerData = preload("res://godot_resources/r_player_data.tres")
+var player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 @onready var smash_area_2d: SmashArea2D = %SmashArea2D
 
 func _ready() -> void:
