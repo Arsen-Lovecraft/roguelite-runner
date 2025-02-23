@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm2w0fg7ebh7k"
-path="res://.godot/imported/Fireball.png-17661ceb6169b5718657b9197c8d3100.ctex"
+path="res://.godot/imported/fireball.png-86a3e80642da9e8557582aa705488082.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/3 Dungeon Enemies/Other/Fireball.png"
-dest_files=["res://.godot/imported/Fireball.png-17661ceb6169b5718657b9197c8d3100.ctex"]
+source_file="res://assets/sfx_and_traps/fireball.png"
+dest_files=["res://.godot/imported/fireball.png-86a3e80642da9e8557582aa705488082.ctex"]
 
 [params]
 

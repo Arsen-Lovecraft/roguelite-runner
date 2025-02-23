@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://g14mn4ugrjhs"]
+
+[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/mage_ai/ps_fireball.gd" id="1_0wtpx"]
+[ext_resource type="Texture2D" uid="uid://dm2w0fg7ebh7k" path="res://assets/sfx_and_traps/fireball.png" id="1_fpbq7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbkeu"]
+size = Vector2(10, 10)
+
+[sub_resource type="Animation" id="Animation_27x52"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireballSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6xq38"]
+resource_name = "vibration"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireballSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2, -1), Vector2(2, 1), Vector2(-2, -2), Vector2(-1, 1), Vector2(1, 2), Vector2(0, -2), Vector2(-2, 0), Vector2(-2, 2), Vector2(2, -1), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_us8sq"]
+_data = {
+"RESET": SubResource("Animation_27x52"),
+"vibration": SubResource("Animation_6xq38")
+}
+
+[node name="PsFireball" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_0wtpx")
+
+[node name="FireballSprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_fpbq7")
+
+[node name="FireballCollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jbkeu")
+
+[node name="FireballAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_us8sq")
+}
+autoplay = "vibration"
+
+[node name="FireballVisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

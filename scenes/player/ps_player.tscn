@@ -884,7 +884,7 @@ position = Vector2(1, 6)
 scale = Vector2(2.75, 2.75)
 texture = ExtResource("2_nrv1g")
 hframes = 6
-frame = 1
+frame = 2
 
 [node name="BloodVFXSprite2D" type="Sprite2D" parent="."]
 visible = false

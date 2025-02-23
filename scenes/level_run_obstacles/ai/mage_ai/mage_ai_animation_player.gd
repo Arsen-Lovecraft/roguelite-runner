@@ -4,6 +4,7 @@ extends AnimationPlayer
 
 func _ready() -> void:
 	_connect_signals()
+	(self as AnimationPlayer).play("down_idle")
 
 func _connect_signals() -> void:
 	if _mage_ai.mage_attacked.connect(_on_mage_attacked) : printerr("Fail: ", get_stack())
