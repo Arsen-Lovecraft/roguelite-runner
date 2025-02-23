@@ -1,7 +1,6 @@
 class_name IDangerousArea2D
 extends Area2D
 
-@warning_ignore("unused_signal")
 signal player_damaged(damage: float)
 
 @export var damage: float = 20:

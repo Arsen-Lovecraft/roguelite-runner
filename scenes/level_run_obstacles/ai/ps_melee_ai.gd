@@ -4,7 +4,7 @@ extends IDangerousArea2D
 signal melee_ai_is_dead()
 
 @export var move_distance: float = 200
-@export var speed: float = 200
+@export var speed: float = 20
 
 var velocity: float = 0.0
 

@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 var player_data: RPlayerData = preload("res://godot_resources/r_player_data.tres")
+@onready var smash_area_2d: SmashArea2D = %SmashArea2D
 
 func _ready() -> void:
 	_connect_signals()
@@ -27,17 +28,9 @@ func _move_player() -> void:
 
 func _handle_steering() -> void:
 	if(Input.is_action_pressed("turn_right")):
-		#TEST
-		player_data.steering_velocity -= 1.0
-		player_data.velocity -= 1.0
-		#TEST
 		if(player_data.steering_velocity > velocity.x):
 			velocity += Vector2(player_data.steering_velocity/5, 0)
 	elif(Input.is_action_pressed("turn_left")):
-		#TEST
-		player_data.steering_velocity += 1.0
-		player_data.velocity += 1.0
-		#TEST
 		if(player_data.steering_velocity > -velocity.x):
 			velocity += Vector2(-player_data.steering_velocity/5, 0)
 	else:
@@ -47,8 +40,13 @@ func _handle_steering() -> void:
 			velocity.x = 0
 
 func _handle_smashing() -> void:
-	if(Input.is_action_pressed("smash")):
-		pass
+	if(Input.is_action_just_pressed("smash")):
+		if (smash_area_2d.get_closest_enemy() != null):
+			var closest_enemy: Area2D = smash_area_2d.get_closest_enemy()
+			closest_enemy.monitoring = false
+			Utility.slow_motion(0.8, 0.2)
+			self.global_position = lerp(self.global_position,closest_enemy.global_position,0.95)
+			closest_enemy.queue_free()
 
 func _on_player_dead() -> void:
 	player_data.velocity = 0

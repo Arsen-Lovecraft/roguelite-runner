@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dabytd6kvn500"]
+[gd_scene load_steps=33 format=3 uid="uid://dabytd6kvn500"]
 
 [ext_resource type="Script" path="res://scenes/ps_player.gd" id="1_2nhf7"]
 [ext_resource type="Texture2D" uid="uid://cds2866uuelrc" path="res://assets/sfx_and_traps/shadow.png" id="2_helvp"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d3os6cnu1b6lu" path="res://assets/sfx_and_traps/blood_up.png" id="10_b4blt"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://c8yj1mffk6yc0" path="res://godot_resources/animations_state_machines/ps_player_animation_tree.tres" id="10_pfluq"]
 [ext_resource type="Script" path="res://scenes/ps_player_animation_tree.gd" id="11_5s1ih"]
+[ext_resource type="Script" path="res://scenes/smash_area_2d.gd" id="13_rl05o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_okrtc"]
 height = 50.0
@@ -860,6 +861,10 @@ _data = {
 "blood_up": SubResource("Animation_nvcg0")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4yhl"]
+radius = 32.0
+height = 110.0
+
 [node name="PlayerBody2D" type="CharacterBody2D"]
 collision_mask = 30
 motion_mode = 1
@@ -879,7 +884,6 @@ position = Vector2(1, 6)
 scale = Vector2(2.75, 2.75)
 texture = ExtResource("2_nrv1g")
 hframes = 6
-frame = 4
 
 [node name="BloodVFXSprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -909,3 +913,14 @@ deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_x331j")
 }
+
+[node name="SmashArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -27)
+collision_layer = 2147483648
+collision_mask = 8
+script = ExtResource("13_rl05o")
+
+[node name="SmashCollisionShape2D" type="CollisionShape2D" parent="SmashArea2D"]
+position = Vector2(0, -25)
+shape = SubResource("CapsuleShape2D_k4yhl")

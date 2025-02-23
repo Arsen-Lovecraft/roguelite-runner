@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_oliq2")
-velocity = 0.0
+velocity = 100.0
 hp = 50.0
 steering_velocity = 160.0
 smash_cooldown = 3.0

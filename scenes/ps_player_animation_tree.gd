@@ -15,15 +15,6 @@ func _physics_process(_delta: float) -> void:
 	if(_player_data.hp <=0):
 		return
 
-	if(_player.velocity.x > 30):
-		_animation_state_machine_playback.travel("steering_right")
-	elif(_player.velocity.x < -30):
-		_animation_state_machine_playback.travel("steering_left")
-	elif(_animation_state_machine_playback.get_current_node() != "smash_up" and 
-	_animation_state_machine_playback.get_current_node() != "smash_left" and
-	_animation_state_machine_playback.get_current_node() != "smash_right"):
-		_animation_state_machine_playback.travel("steering_up")
-
 	if(Input.is_action_just_pressed("smash")):
 		if(_animation_state_machine_playback.get_current_node() == "steering_up"):
 			_animation_state_machine_playback.travel("smash_up")
@@ -31,6 +22,19 @@ func _physics_process(_delta: float) -> void:
 			_animation_state_machine_playback.travel("smash_left")
 		elif(_animation_state_machine_playback.get_current_node() == "steering_right"):
 			_animation_state_machine_playback.travel("smash_right")
+
+	if(_animation_state_machine_playback.get_current_node() != "smash_up" and 
+	_animation_state_machine_playback.get_current_node() != "smash_left" and 
+	_animation_state_machine_playback.get_current_node() != "smash_right"):
+		if(_player.velocity.x > 30):
+			_animation_state_machine_playback.travel("steering_right")
+		elif(_player.velocity.x < -30):
+			_animation_state_machine_playback.travel("steering_left")
+		elif(_animation_state_machine_playback.get_current_node() != "smash_up" and 
+		_animation_state_machine_playback.get_current_node() != "smash_left" and
+		_animation_state_machine_playback.get_current_node() != "smash_right"):
+			_animation_state_machine_playback.travel("steering_up")
+
 
 func _update_animations_speed() -> void:
 	if(_animation_state_machine_playback.get_current_node() == "steering_up"):

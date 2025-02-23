@@ -74,7 +74,114 @@ position = Vector2(204, -1028)
 [node name="Marker2D2" type="Marker2D" parent="Env/Traps/Arrows4"]
 position = Vector2(-202, -1056)
 
-[node name="PsPlayer" parent="." instance=ExtResource("1_fm5jw")]
+[node name="Enemies" type="Node2D" parent="."]
 
-[node name="MeleeAi" parent="." instance=ExtResource("5_p2h7o")]
+[node name="MeleeAi" parent="Enemies" instance=ExtResource("5_p2h7o")]
 position = Vector2(1, -266)
+
+[node name="MeleeAi2" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-1, -314)
+
+[node name="MeleeAi3" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(3, -363)
+
+[node name="MeleeAi4" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(3, -415)
+
+[node name="MeleeAi5" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(8, -472)
+
+[node name="MeleeAi6" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-119, -631)
+
+[node name="MeleeAi7" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-121, -690)
+
+[node name="MeleeAi8" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(7, -742)
+
+[node name="MeleeAi9" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(7, -808)
+
+[node name="MeleeAi10" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(130, -886)
+
+[node name="MeleeAi11" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-119, -959)
+
+[node name="MeleeAi12" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-5, -1103)
+
+[node name="MeleeAi13" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(115, -1037)
+
+[node name="MeleeAi14" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(124, -1148)
+
+[node name="MeleeAi15" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-8, -1202)
+
+[node name="MeleeAi16" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(-104, -1253)
+
+[node name="MeleeAi17" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(4, -1394)
+
+[node name="MeleeAi18" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(4, -1456)
+
+[node name="MeleeAi19" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(4, -1537)
+
+[node name="MeleeAi20" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(21, -1651)
+
+[node name="MeleeAi21" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(4, -1753)
+
+[node name="MeleeAi22" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(4, -1815)
+
+[node name="MeleeAi23" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(4, -1896)
+
+[node name="MeleeAi24" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(21, -2010)
+
+[node name="MeleeAi25" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(12, -2115)
+
+[node name="MeleeAi26" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(12, -2177)
+
+[node name="MeleeAi27" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(12, -2258)
+
+[node name="MeleeAi28" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(29, -2372)
+
+[node name="MeleeAi29" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(20, -2462)
+
+[node name="MeleeAi30" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(20, -2524)
+
+[node name="MeleeAi31" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(20, -2605)
+
+[node name="MeleeAi32" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(37, -2719)
+
+[node name="MeleeAi33" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(24, -2862)
+
+[node name="MeleeAi34" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(24, -2924)
+
+[node name="MeleeAi35" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(24, -3005)
+
+[node name="MeleeAi36" parent="Enemies" instance=ExtResource("5_p2h7o")]
+position = Vector2(41, -3119)
+
+[node name="PsPlayer" parent="." instance=ExtResource("1_fm5jw")]
