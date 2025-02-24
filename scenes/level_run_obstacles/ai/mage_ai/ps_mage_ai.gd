@@ -23,6 +23,7 @@ func _connect_signals() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if(body is Player):
 		_damage_trait.player_damaged.emit(_damage_trait.damage)
+		##TODO Decouple
 		EventBus.player_damaged.emit(_damage_trait.damage)
 		mage_died.emit()
 		queue_free()

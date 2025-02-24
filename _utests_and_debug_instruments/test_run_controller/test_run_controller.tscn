@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://bbn1ni4fjsagv"]
+[gd_scene load_steps=9 format=4 uid="uid://bbn1ni4fjsagv"]
 
 [ext_resource type="TileSet" uid="uid://cwr71gvv4tmhb" path="res://_utests_and_debug_instruments/test_assets/2 Dungeon Tileset/1 Tiles/dungeon_tile_set.tres" id="1_4o6f5"]
 [ext_resource type="Script" path="res://scripts/core/run_controller.gd" id="1_xcjj7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dlobfbh10chdr" path="res://scenes/level_run_obstacles/ai/melee_ai/ps_melee_ai.tscn" id="4_jgem0"]
 [ext_resource type="PackedScene" uid="uid://cgwtfr7ainwt5" path="res://scenes/level_run_obstacles/ai/mage_ai/ps_mage_ai.tscn" id="5_13y63"]
 [ext_resource type="PackedScene" uid="uid://dabytd6kvn500" path="res://scenes/player/ps_player.tscn" id="6_5e023"]
+[ext_resource type="PackedScene" uid="uid://cis8lh2j7kl48" path="res://scenes/level_run/ps_win_area.tscn" id="8_ualj2"]
 
 [node name="RunController" type="Node"]
 script = ExtResource("1_xcjj7")
@@ -184,12 +185,6 @@ position = Vector2(24, -2862)
 [node name="MeleeAi34" parent="TestLevel/Enemies" instance=ExtResource("4_jgem0")]
 position = Vector2(24, -2924)
 
-[node name="MeleeAi35" parent="TestLevel/Enemies" instance=ExtResource("4_jgem0")]
-position = Vector2(24, -3005)
-
-[node name="MeleeAi36" parent="TestLevel/Enemies" instance=ExtResource("4_jgem0")]
-position = Vector2(41, -3119)
-
 [node name="PsMageAi" parent="TestLevel/Enemies" instance=ExtResource("5_13y63")]
 position = Vector2(7, -557)
 
@@ -200,3 +195,6 @@ position = Vector2(148, -721)
 position = Vector2(-128, -1042)
 
 [node name="PsPlayer" parent="TestLevel" instance=ExtResource("6_5e023")]
+
+[node name="WinArea" parent="." instance=ExtResource("8_ualj2")]
+position = Vector2(15.7651, -2965.73)

@@ -19,6 +19,7 @@ func _try_damage_player() -> void:
 	for i: Node2D in self.get_overlapping_bodies():
 		if(i is Player):
 			damage_trait.player_damaged.emit(damage_trait.damage)
+			##TODO Decouple
 			EventBus.player_damaged.emit(damage_trait.damage)
 
 func _on_body_entered(body: Node2D) -> void:
