@@ -24,4 +24,4 @@ signal player_dead()
 		else:
 			steering_velocity = value
 
-@export var smash_cooldown: float = 3.0
+@export var default_start_time: int = 15

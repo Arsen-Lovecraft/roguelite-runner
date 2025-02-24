@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 signal moved_right()
 signal moved_left()
+signal moved_up()
 signal smashed()
 
 var player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
@@ -43,6 +44,7 @@ func _handle_steering() -> void:
 	else:
 		if(abs(velocity.x) > 1):
 			velocity.x = lerp(velocity.x, 0.0, 0.15)
+			moved_up.emit()
 		else:
 			velocity.x = 0
 
