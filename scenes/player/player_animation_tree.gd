@@ -14,13 +14,14 @@ func _physics_process(_delta: float) -> void:
 	_update_animations_speed()
 
 func _connect_signals() -> void:
-	if _player_data.player_dead.connect(_on_player_dead): printerr("Fail: ",get_stack())
+	if EventBus.life_time_left.connect(_on_life_time_left): printerr("Fail: ",get_stack())
 	if _player.moved_left.connect(_on_moved_left): printerr("Fail: ",get_stack())
 	if _player.moved_right.connect(_on_moved_right): printerr("Fail: ",get_stack())
+	if _player.moved_up.connect(_on_moved_up): printerr("Fail: ",get_stack())
 	if _player.smashed.connect(_on_smashed): printerr("Fail: ",get_stack())
 	if EventBus.player_damaged.connect(_on_player_damaged): printerr("Fail: ",get_stack())
 
-func _on_player_dead() -> void:
+func _on_life_time_left() -> void:
 	if(_animation_state_machine_playback.get_current_node() == "steering_up" or 
 	_animation_state_machine_playback.get_current_node() == "smash_up"):
 		_animation_state_machine_playback.start("death_up")
@@ -38,6 +39,9 @@ func _on_moved_left() -> void:
 func _on_moved_right() -> void:
 	if(_player.velocity.x > 30):
 		_animation_state_machine_playback.travel("steering_right")
+
+func _on_moved_up() -> void:
+	_animation_state_machine_playback.travel("steering_up")
 
 func _on_smashed() -> void:
 	if(_animation_state_machine_playback.get_current_node() == "steering_up"):

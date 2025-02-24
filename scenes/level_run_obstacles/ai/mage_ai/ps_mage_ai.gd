@@ -17,12 +17,13 @@ func _ready() -> void:
 	_connect_signals()
 
 func _connect_signals() -> void:
-	if body_entered.connect(_on_body_entered) : printerr("Fail: ",get_stack())
-	if _cooldown_timer.timeout.connect(_on_cooldown_timeout) : printerr("Fail: ",get_stack())
+	if body_entered.connect(_on_body_entered): printerr("Fail: ",get_stack())
+	if _cooldown_timer.timeout.connect(_on_cooldown_timeout): printerr("Fail: ",get_stack())
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body is Player):
 		_damage_trait.player_damaged.emit(_damage_trait.damage)
+		##TODO Decouple
 		EventBus.player_damaged.emit(_damage_trait.damage)
 		mage_died.emit()
 		queue_free()

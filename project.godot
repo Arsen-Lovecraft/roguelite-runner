@@ -15,7 +15,7 @@ warnings/check_invalid_track_paths=false
 [application]
 
 config/name="RogueliteRunner"
-run/main_scene="res://_utests_and_debug_instruments/test_player/test.tscn"
+run/main_scene="res://_utests_and_debug_instruments/test_run_controller/test_run_controller.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://assets/knight/hurt_left.png"
