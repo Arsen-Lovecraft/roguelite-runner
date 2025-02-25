@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfjaynmnfywer"
-path="res://.godot/imported/TileMap1.png-a2178e3c7cc1659daa52d5bf5afe99a4.ctex"
+uid="uid://ckcxon0fpv4ct"
+path="res://.godot/imported/speedometer.png-8498d58e63bb7deaab99f0e48ee603c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/4 GUI/1 Interface/TileMap1.png"
-dest_files=["res://.godot/imported/TileMap1.png-a2178e3c7cc1659daa52d5bf5afe99a4.ctex"]
+source_file="res://assets/ui/speedometer.png"
+dest_files=["res://.godot/imported/speedometer.png-8498d58e63bb7deaab99f0e48ee603c5.ctex"]
 
 [params]
 

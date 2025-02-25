@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvnmjwspbxcq3"
-path="res://.godot/imported/BarTile_03.png-e39d2b91a1f8812be50b7fce29d504d6.ctex"
+uid="uid://dvxpuks480gy0"
+path="res://.godot/imported/progress_under.png-d7149123077998927fcaf93ee4cf0f97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/4 GUI/4 Bars/BarTile_03.png"
-dest_files=["res://.godot/imported/BarTile_03.png-e39d2b91a1f8812be50b7fce29d504d6.ctex"]
+source_file="res://assets/ui/progress_under.png"
+dest_files=["res://.godot/imported/progress_under.png-d7149123077998927fcaf93ee4cf0f97.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmwcfif4g237g"
-path="res://.godot/imported/Button3.png-a287b51c0e729aedc9c74b4729d6f992.ctex"
+uid="uid://b8dxos47c2poe"
+path="res://.godot/imported/speedometer_arrow.png-b4d49ca1a794c7818154a3d9d115a64a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/4 GUI/2 Buttons/Button3.png"
-dest_files=["res://.godot/imported/Button3.png-a287b51c0e729aedc9c74b4729d6f992.ctex"]
+source_file="res://assets/ui/speedometer_arrow.png"
+dest_files=["res://.godot/imported/speedometer_arrow.png-b4d49ca1a794c7818154a3d9d115a64a.ctex"]
 
 [params]
 

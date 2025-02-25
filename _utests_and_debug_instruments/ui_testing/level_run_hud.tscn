@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfktqrivgkydd"]
+
+[ext_resource type="PackedScene" uid="uid://u151gmeimbih" path="res://scenes/ui/ps_speedometer_ui.tscn" id="1_4llwc"]
+[ext_resource type="PackedScene" uid="uid://b14jvpl7t0cvh" path="res://scenes/ui/ps_stamina_ui.tscn" id="2_j6mfb"]
+
+[node name="LevelRunHud" type="CanvasLayer"]
+
+[node name="PsSpeedometer" parent="." instance=ExtResource("1_4llwc")]
+
+[node name="PsStaminaUi" parent="." instance=ExtResource("2_j6mfb")]
+offset_left = 181.0
+offset_top = 5.0
+offset_right = 181.0
+offset_bottom = 5.0
+scale = Vector2(0.5, 0.5)

@@ -1,7 +1,7 @@
 extends AnimationTree
 
 @onready var _player: Player = (get_parent() as Player)
-@onready var _player_data: RPlayerData = _player.player_data
+@onready var _player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 @onready var _animation_state_machine_playback: AnimationNodeStateMachinePlayback = \
 	(self as AnimationTree).get("parameters/AnimationNodeStateMachine/playback")
 @onready var _vfx_animation_player: AnimationPlayer = %VFXAnimationPlayer
@@ -59,15 +59,18 @@ func _on_player_damaged(_damage: float) -> void:
 
 func _update_animations_speed() -> void:
 	if(_animation_state_machine_playback.get_current_node() == "steering_up"):
-		(self as AnimationTree).set("parameters/TimeScale/scale", _get_animation_speed_coef(_player_data.velocity))
+		(self as AnimationTree).set("parameters/TimeScale/scale", 
+								_get_animation_speed_coef(_player_data.current_velocity, 0, _player_data.max_velocity))
 	elif(_animation_state_machine_playback.get_current_node() == "steering_left"
 	or _animation_state_machine_playback.get_current_node() == "steering_right"):
-		(self as AnimationTree).set("parameters/TimeScale/scale", _get_animation_speed_coef(_player_data.steering_velocity))
+		(self as AnimationTree).set("parameters/TimeScale/scale", 
+								_get_animation_speed_coef(_player_data.current_velocity, 0, _player_data.max_velocity))
 	else:
 		(self as AnimationTree).set("parameters/TimeScale/scale", 1.0)
 
-func _get_animation_speed_coef(current_speed: float,lowest_coef: float = 0.25,highest_coef: float = 3.0,
-							lowest_speed: float = 25,highest_speed: float = 300) -> float:
+func _get_animation_speed_coef(current_speed: float,
+	lowest_speed: float = 25,highest_speed: float = 300,
+	lowest_coef: float = 0.25,highest_coef: float = 3.0,) -> float:
 		if(current_speed == 0):
 			return 0.0
 		var linear_derivatve: float = (highest_coef - lowest_coef)/(highest_speed - lowest_speed)
