@@ -9,3 +9,4 @@ max_velocity = 300.0
 max_stamina = 200.0
 steering_velocity = 160.0
 default_start_time = 17
+accelerate_per_second = 75.0

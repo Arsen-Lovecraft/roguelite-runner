@@ -14,13 +14,11 @@ func _ready() -> void:
 	_connect_signals()
 
 func _physics_process(delta: float) -> void:
-	print(player_data.current_velocity)
 	_move_player(delta)
 	_handle_steering()
 	_handle_smashing()
 	velocity.x = clamp(velocity.x, -player_data.steering_velocity, player_data.steering_velocity)
 	velocity.y = clamp(velocity.y, -player_data.current_velocity, 0)
-	print(velocity)
 	@warning_ignore("return_value_discarded")
 	move_and_slide()
 

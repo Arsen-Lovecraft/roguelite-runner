@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ckcxon0fpv4ct" path="res://assets/ui/speedometer.png" id="2_b0yks"]
 [ext_resource type="Texture2D" uid="uid://b8dxos47c2poe" path="res://assets/ui/speedometer_arrow.png" id="3_ab8tw"]
 
-[node name="PsSpeedometr" type="Control"]
+[node name="PsSpeedometrUi" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
