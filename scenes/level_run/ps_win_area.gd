@@ -1,7 +1,7 @@
 class_name WinArea
 extends Area2D
 
-func _ready() -> void:
+func _ready() -> void	:
 	_connect_signals()
 
 func _connect_signals() -> void:

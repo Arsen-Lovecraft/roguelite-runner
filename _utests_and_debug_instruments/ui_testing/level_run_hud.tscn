@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfktqrivgkydd"]
+[gd_scene load_steps=5 format=3 uid="uid://dfktqrivgkydd"]
 
 [ext_resource type="PackedScene" uid="uid://u151gmeimbih" path="res://scenes/ui/ps_speedometer_ui.tscn" id="1_4llwc"]
 [ext_resource type="PackedScene" uid="uid://b14jvpl7t0cvh" path="res://scenes/ui/ps_stamina_ui.tscn" id="2_j6mfb"]
 [ext_resource type="PackedScene" uid="uid://d300vj13mwluh" path="res://scenes/ui/ps_smash_cue_ui.tscn" id="3_crn0c"]
+[ext_resource type="PackedScene" uid="uid://bxhab8c7kiqhi" path="res://scenes/ui/ps_timer_ui.tscn" id="4_qnodg"]
 
 [node name="LevelRunHud" type="CanvasLayer"]
 
@@ -16,3 +17,5 @@ offset_bottom = 5.0
 scale = Vector2(0.5, 0.5)
 
 [node name="PsSmashCueUi" parent="." instance=ExtResource("3_crn0c")]
+
+[node name="PsTimerUi" parent="." instance=ExtResource("4_qnodg")]

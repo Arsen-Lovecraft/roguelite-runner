@@ -19,7 +19,6 @@ func _physics_process(delta: float) -> void:
 	var enemy: Area2D = _smash_area_2d.get_closest_enemy()
 	if(enemy != null):
 		input_cue.global_position = _smash_area_2d.global_position
-		Utility.slow_motion(9.0, 0.1)
 		for node_sprite: Node in enemy.get_children():
 			if(node_sprite is Sprite2D):
 				_target_mark_texture_rect.size = (node_sprite as Sprite2D).get_rect().size * 1.5

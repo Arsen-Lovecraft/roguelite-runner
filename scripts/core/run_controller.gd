@@ -1,11 +1,14 @@
 class_name RunController
 extends Node
 
+signal won()
+signal lost()
 
 var _life_timer: LifeTimer = preload("res://scenes/level_run/ps_timer.tscn").instantiate()
 var _player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 
 func _init() -> void:
+	self.add_to_group("run_controller")
 	_life_timer.set_time(_player_data.default_start_time)
 
 func _ready() -> void:
