@@ -11,7 +11,6 @@ func _ready() -> void:
 	_smash_area_2d = get_tree().get_first_node_in_group("smash_area_2d")
 	call_deferred("reparent",get_tree().current_scene)
 	input_cue_label.text = Utility.get_key_string_for_action("smash",1)
-	print(input_cue_label.text =="\"Space (Physical)\"")
 	if(input_cue_label.text =="\"Space (Physical)\""):
 		input_cue_label.text = "Space"
 

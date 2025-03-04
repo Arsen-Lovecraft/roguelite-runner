@@ -20,10 +20,10 @@ func start_level_run() -> void:
 	_life_timer.continue_timer()
 
 func end_level_lose() -> void:
-	print("You lost")
+	lost.emit()
 
 func end_level_win() -> void:
-	print("You win")
+	won.emit()
 	_life_timer.stop_timer()
 
 func _connect_signals() -> void:

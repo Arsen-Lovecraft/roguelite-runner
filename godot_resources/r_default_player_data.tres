@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_p2ppq")
-start_velocity = 25.0
-max_velocity = 25.0
+start_velocity = 150.0
+max_velocity = 250.0
 max_stamina = 200.0
 steering_velocity = 160.0
 default_start_time = 17

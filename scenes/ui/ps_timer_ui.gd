@@ -10,13 +10,12 @@ func _ready() -> void:
 	
 
 func _on_timer_updated(time: int) -> void:
-	if(time <=0):
-		time_label.text = "Time is out. You lost!"
-	else:
-		time_label.text = "Time: " + str(time)
+	time_label.text = "Time: " + str(time)
 
 func _on_won() -> void:
-	time_label.text = "Win!"
+	time_label.text = "Win!"   
+	(get_tree().get_first_node_in_group("run_controller") as RunController)._life_timer.time_updated.disconnect(_on_timer_updated)
 	
 func _on_lost() -> void:
-	time_label.text = "Lost..."
+	time_label.text = "Time is out. You lost!"
+	(get_tree().get_first_node_in_group("run_controller") as RunController)._life_timer.time_updated.disconnect(_on_timer_updated)

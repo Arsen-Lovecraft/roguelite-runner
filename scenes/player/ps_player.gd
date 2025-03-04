@@ -12,6 +12,7 @@ var player_data: RPlayerData = preload("res://godot_resources/r_default_player_d
 func _ready() -> void:
 	self.add_to_group("player")
 	_connect_signals()
+	player_data._init()
 
 func _physics_process(delta: float) -> void:
 	_move_player(delta)
@@ -54,11 +55,9 @@ func _handle_smashing() -> void:
 		if (smash_area_2d.get_closest_enemy() != null):
 			var closest_enemy: Area2D = smash_area_2d.get_closest_enemy()
 			closest_enemy.disable_mode = CollisionObject2D.DISABLE_MODE_REMOVE
-			Utility.slow_motion(0.8, 0.2)
-			self.global_position = lerp(self.global_position,closest_enemy.global_position,0.95)
+			Utility.slow_motion(0.5, 0.5)
+			self.global_position = lerp(self.global_position,closest_enemy.global_position,0.81)
 			closest_enemy.queue_free()
-			player_data.current_velocity += 15
-			player_data.max_velocity += 15
 			smashed.emit()
 
 func _on_player_stamina_waste() -> void:
