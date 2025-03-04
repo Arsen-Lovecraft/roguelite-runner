@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b14jvpl7t0cvh"]
+
+[ext_resource type="Script" path="res://scenes/ui/ps_stamina_ui.gd" id="1_rbcd6"]
+[ext_resource type="Texture2D" uid="uid://dvxpuks480gy0" path="res://assets/ui/progress_under.png" id="2_txfxt"]
+[ext_resource type="Texture2D" uid="uid://cj56fm4k87a8s" path="res://assets/ui/progress_fill.png" id="3_yj1fd"]
+
+[node name="PsStaminaUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_rbcd6")
+
+[node name="StaminaTextureProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_under = ExtResource("2_txfxt")
+texture_progress = ExtResource("3_yj1fd")
+
+[node name="StaminaText" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 49.0
+offset_right = 393.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "200/500"

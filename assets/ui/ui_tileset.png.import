@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce4aui068khup"
-path="res://.godot/imported/BarTile_02.png-fb6540cd35467f76f541481a8d325f8a.ctex"
+uid="uid://cfjaynmnfywer"
+path="res://.godot/imported/ui_tileset.png-cba7b7b88362f514f7753a579400552b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/4 GUI/4 Bars/BarTile_02.png"
-dest_files=["res://.godot/imported/BarTile_02.png-fb6540cd35467f76f541481a8d325f8a.ctex"]
+source_file="res://assets/ui/ui_tileset.png"
+dest_files=["res://.godot/imported/ui_tileset.png-cba7b7b88362f514f7753a579400552b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxqux4vlqu6kg"
-path="res://.godot/imported/BarTile_01.png-f57c69a339e52d229bcd7e8e9dbc09a6.ctex"
+uid="uid://dmwcfif4g237g"
+path="res://.godot/imported/button_idle.png-706f672a25d0e9920c57bf5c567b0ec8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/4 GUI/4 Bars/BarTile_01.png"
-dest_files=["res://.godot/imported/BarTile_01.png-f57c69a339e52d229bcd7e8e9dbc09a6.ctex"]
+source_file="res://assets/ui/button_idle.png"
+dest_files=["res://.godot/imported/button_idle.png-706f672a25d0e9920c57bf5c567b0ec8.ctex"]
 
 [params]
 

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://u151gmeimbih"]
+
+[ext_resource type="Script" path="res://scenes/ui/ps_speedometer_ui.gd" id="1_dgu4i"]
+[ext_resource type="Texture2D" uid="uid://ckcxon0fpv4ct" path="res://assets/ui/speedometer.png" id="2_b0yks"]
+[ext_resource type="Texture2D" uid="uid://b8dxos47c2poe" path="res://assets/ui/speedometer_arrow.png" id="3_ab8tw"]
+
+[node name="PsSpeedometrUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.2, 4.2)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_dgu4i")
+
+[node name="SpeedometrTextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_b0yks")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SpeedometrArrowTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+offset_left = 20.4762
+offset_top = 8.80952
+offset_right = 32.1462
+offset_bottom = 35.4145
+rotation = -3.03687
+pivot_offset = Vector2(0.295, 12.795)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_ab8tw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SpeedLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 11.0
+offset_top = 24.0
+offset_right = 89.0
+offset_bottom = 47.0
+scale = Vector2(0.249059, 0.310679)
+text = "150 speed"
+
+[node name="MaxSpeedLabel" type="Label" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 11.6667
+offset_top = 31.4286
+offset_right = 121.667
+offset_bottom = 54.4286
+scale = Vector2(0.140902, 0.1912)
+text = "300 km/h max"

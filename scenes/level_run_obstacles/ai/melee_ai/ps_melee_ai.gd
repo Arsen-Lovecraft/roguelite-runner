@@ -1,8 +1,6 @@
 class_name MeleeAI
 extends Area2D
 
-signal melee_ai_is_dead()
-
 @export var move_distance: float = 200
 @export var speed: float = 20
 
@@ -11,7 +9,7 @@ var velocity: float = 0.0
 @onready var damage_trait: RDamageTrait = RDamageTrait.new().duplicate()
 
 func _ready() -> void:
-	velocity = [-speed,speed][randi_range(0,1)]
+	velocity = speed
 	_connect_signals()
 
 func _physics_process(_delta: float) -> void:

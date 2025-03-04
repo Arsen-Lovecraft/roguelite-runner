@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dghc62ybvt3h7"
-path="res://.godot/imported/1.png-a60f743fc25fbd7499c7c5f23c796fa1.ctex"
+uid="uid://cosg6a0yrttwl"
+path="res://.godot/imported/mark.png-05cf89175b80951d75f3f6c7374275f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_utests_and_debug_instruments/test_assets/4 GUI/6 Logo/1.png"
-dest_files=["res://.godot/imported/1.png-a60f743fc25fbd7499c7c5f23c796fa1.ctex"]
+source_file="res://assets/ui/mark.png"
+dest_files=["res://.godot/imported/mark.png-05cf89175b80951d75f3f6c7374275f8.ctex"]
 
 [params]
 
