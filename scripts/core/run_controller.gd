@@ -4,7 +4,7 @@ extends Node
 signal won()
 signal lost()
 
-var _life_timer: LifeTimer = preload("res://scenes/level_run/ps_timer.tscn").instantiate()
+var _life_timer: LifeTimer = preload("res://scenes/level_run/ps_life_timer.tscn").instantiate()
 var _player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 
 func _init() -> void:

@@ -1,3 +1,4 @@
+class_name UITimer
 extends Control
 
 @onready var time_label: Label = %TimeLabel

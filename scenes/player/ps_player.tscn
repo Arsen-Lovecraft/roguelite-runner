@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://dabytd6kvn500"]
 
-[ext_resource type="Script" path="res://scenes/player/ps_player.gd" id="1_2nhf7"]
+[ext_resource type="Script" uid="uid://cs3ok5l5soxan" path="res://scenes/player/ps_player.gd" id="1_2nhf7"]
 [ext_resource type="Texture2D" uid="uid://cds2866uuelrc" path="res://assets/sfx_and_traps/shadow.png" id="2_helvp"]
 [ext_resource type="Texture2D" uid="uid://dqs240qimi3x1" path="res://assets/knight/steering_up.png" id="2_nrv1g"]
 [ext_resource type="Texture2D" uid="uid://cnqnvmdpm8r7u" path="res://assets/knight/death_left.png" id="3_6mmwh"]
@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dih3s0l0802g1" path="res://assets/knight/steering_left.png" id="8_jubvx"]
 [ext_resource type="Texture2D" uid="uid://d3os6cnu1b6lu" path="res://assets/sfx_and_traps/blood_up.png" id="10_b4blt"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://c8yj1mffk6yc0" path="res://godot_resources/animations_state_machines/ps_player_animation_tree.tres" id="10_pfluq"]
-[ext_resource type="Script" path="res://scenes/player/player_animation_tree.gd" id="11_5s1ih"]
-[ext_resource type="Script" path="res://scenes/player/smash_area_2d.gd" id="13_rl05o"]
+[ext_resource type="Script" uid="uid://b20cvsbe4pwq5" path="res://scenes/player/player_animation_tree.gd" id="11_5s1ih"]
+[ext_resource type="Script" uid="uid://c684bjlbvttlp" path="res://scenes/player/smash_area_2d.gd" id="13_rl05o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_okrtc"]
 height = 50.0
@@ -603,16 +603,16 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2d44p"]
 _data = {
-"RESET": SubResource("Animation_me4p2"),
-"death_left": SubResource("Animation_dfvaj"),
-"death_right": SubResource("Animation_1foeh"),
-"death_up": SubResource("Animation_b3eul"),
-"smash_left": SubResource("Animation_wca7s"),
-"smash_right": SubResource("Animation_epa5y"),
-"smash_up": SubResource("Animation_risb1"),
-"steering_left": SubResource("Animation_enkrw"),
-"steering_right": SubResource("Animation_mpdkc"),
-"steering_up": SubResource("Animation_c6uo4")
+&"RESET": SubResource("Animation_me4p2"),
+&"death_left": SubResource("Animation_dfvaj"),
+&"death_right": SubResource("Animation_1foeh"),
+&"death_up": SubResource("Animation_b3eul"),
+&"smash_left": SubResource("Animation_wca7s"),
+&"smash_right": SubResource("Animation_epa5y"),
+&"smash_up": SubResource("Animation_risb1"),
+&"steering_left": SubResource("Animation_enkrw"),
+&"steering_right": SubResource("Animation_mpdkc"),
+&"steering_up": SubResource("Animation_c6uo4")
 }
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8wo5y"]
@@ -856,9 +856,9 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x331j"]
 _data = {
-"RESET": SubResource("Animation_g4p50"),
-"blood_left": SubResource("Animation_fol2a"),
-"blood_up": SubResource("Animation_nvcg0")
+&"RESET": SubResource("Animation_g4p50"),
+&"blood_left": SubResource("Animation_fol2a"),
+&"blood_up": SubResource("Animation_nvcg0")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4yhl"]
@@ -898,7 +898,7 @@ offset = Vector2(0, -150)
 
 [node name="PlayerAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_2d44p")
+&"": SubResource("AnimationLibrary_2d44p")
 }
 playback_auto_capture = false
 
@@ -912,7 +912,7 @@ script = ExtResource("11_5s1ih")
 unique_name_in_owner = true
 deterministic = true
 libraries = {
-"": SubResource("AnimationLibrary_x331j")
+&"": SubResource("AnimationLibrary_x331j")
 }
 
 [node name="SmashArea2D" type="Area2D" parent="."]

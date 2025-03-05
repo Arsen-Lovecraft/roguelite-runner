@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d300vj13mwluh"]
 
-[ext_resource type="Script" path="res://scenes/ui/ps_smash_cue_ui.gd" id="1_ljvet"]
+[ext_resource type="Script" uid="uid://b48rp1oeq7thf" path="res://scenes/ui/ps_smash_cue_ui.gd" id="1_ljvet"]
 [ext_resource type="Texture2D" uid="uid://cosg6a0yrttwl" path="res://assets/ui/mark.png" id="2_eit1n"]
 [ext_resource type="Texture2D" uid="uid://c3364y0gvc25n" path="res://assets/ui/smash_alert.png" id="3_jogpl"]
 
