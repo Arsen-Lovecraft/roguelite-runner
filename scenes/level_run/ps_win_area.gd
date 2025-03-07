@@ -1,7 +1,10 @@
 class_name WinArea
 extends Area2D
 
-func _ready() -> void	:
+signal player_completed_level()
+
+func _ready() -> void:
+	add_to_group("win_area")
 	_connect_signals()
 
 func _connect_signals() -> void:
@@ -9,5 +12,4 @@ func _connect_signals() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body is Player):
-		##TODO Decouple
-		EventBus.player_completed_level.emit()
+		player_completed_level.emit()

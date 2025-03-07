@@ -14,14 +14,14 @@ func _physics_process(_delta: float) -> void:
 	_update_animations_speed()
 
 func _connect_signals() -> void:
-	if EventBus.life_time_left.connect(_on_life_time_left): printerr("Fail: ",get_stack())
+	if _player.lost.connect(_on_lost): printerr("Fail: ",get_stack())
 	if _player.moved_left.connect(_on_moved_left): printerr("Fail: ",get_stack())
 	if _player.moved_right.connect(_on_moved_right): printerr("Fail: ",get_stack())
 	if _player.moved_up.connect(_on_moved_up): printerr("Fail: ",get_stack())
 	if _player.smashed.connect(_on_smashed): printerr("Fail: ",get_stack())
-	if EventBus.player_damaged.connect(_on_player_damaged): printerr("Fail: ",get_stack())
+	if _player.player_is_damaged.connect(_on_player_is_damaged): printerr("Fail: ",get_stack())
 
-func _on_life_time_left() -> void:
+func _on_lost() -> void:
 	if(_animation_state_machine_playback.get_current_node() == "steering_up" or 
 	_animation_state_machine_playback.get_current_node() == "smash_up"):
 		_animation_state_machine_playback.start("death_up")
@@ -51,7 +51,7 @@ func _on_smashed() -> void:
 	elif(_animation_state_machine_playback.get_current_node() == "steering_right"):
 		_animation_state_machine_playback.travel("smash_right")
 
-func _on_player_damaged(_damage: float) -> void:
+func _on_player_is_damaged() -> void:
 	if (randi_range(0,1) == 0 and !_vfx_animation_player.is_playing()):
 		_vfx_animation_player.play("blood_left")
 	elif(!_vfx_animation_player.is_playing()):

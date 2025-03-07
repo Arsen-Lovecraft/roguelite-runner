@@ -3,7 +3,7 @@ extends Area2D
 
 @onready var _static_obstacle_animation_player: AnimationPlayer = %StaticObstacleAnimationPlayer
 
-@onready var damage_trait: RDamageTrait = RDamageTrait.new().duplicate()
+@onready var damage_trait: RDamageTrait = preload("res://godot_resources/damage_traits/static_obstacle_damage_trait.tres")
 
 func  _ready() -> void:
 	_connect_signals()
@@ -19,8 +19,6 @@ func _try_damage_player() -> void:
 	for i: Node2D in self.get_overlapping_bodies():
 		if(i is Player):
 			damage_trait.player_damaged.emit(damage_trait.damage)
-			##TODO Decouple
-			EventBus.player_damaged.emit(damage_trait.damage)
 
 func _on_body_entered(body: Node2D) -> void:
 	if( body is Player):

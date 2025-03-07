@@ -11,7 +11,6 @@ var _time_stamp: float = 0
 func _ready() -> void:
     _connect_signals()
     _time_left_timer.wait_time = _time_stamp
-    life_timer_timeout.emit()	
     emit_state_every_t(1.0)
 
 func set_time(time: int) -> void:
@@ -36,5 +35,3 @@ func emit_state_every_t(time: float) -> void:
 
 func _on_time_left_timer() -> void:
     life_timer_timeout.emit()
-    ##TODO Decouple
-    EventBus.life_time_left.emit()

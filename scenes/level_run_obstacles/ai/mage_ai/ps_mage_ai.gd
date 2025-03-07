@@ -8,7 +8,7 @@ signal mage_died()
 @export var fireball_velocity: float = 80
 @export var shot_in_advance_time: float = 1.25
 
-@onready var _damage_trait: RDamageTrait = RDamageTrait.new().duplicate()
+@onready var _damage_trait: RDamageTrait = preload("res://godot_resources/damage_traits/mage_ai_damage_trait.tres")
 @onready var _cooldown_timer: Timer = %CooldownTimer
 @onready var _fireball_ps: PackedScene = preload("res://scenes/level_run_obstacles/ai/mage_ai/ps_fireball.tscn")
 
@@ -23,8 +23,6 @@ func _connect_signals() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if(body is Player):
 		_damage_trait.player_damaged.emit(_damage_trait.damage)
-		##TODO Decouple
-		EventBus.player_damaged.emit(_damage_trait.damage)
 		mage_died.emit()
 		queue_free()
 
