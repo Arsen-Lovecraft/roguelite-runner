@@ -5,6 +5,8 @@ signal moved_right()
 signal moved_left()
 signal moved_up()
 signal smashed()
+signal player_is_damaged()
+signal lost()
 
 var player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 @onready var smash_area_2d: SmashArea2D = %SmashArea2D
@@ -25,8 +27,6 @@ func _physics_process(delta: float) -> void:
 
 func _connect_signals() -> void:
 	if player_data.player_stamina_waste.connect(_on_player_stamina_waste): printerr("Fail: ",get_stack())
-	if EventBus.life_time_left.connect(_on_life_time_left): printerr("Fail: ",get_stack())
-	if EventBus.player_damaged.connect(_on_player_damaged): printerr("Fail: ",get_stack())
 
 func _move_player(delta: float) -> void:
 	if(velocity.y < player_data.current_velocity):
@@ -71,9 +71,11 @@ func _on_player_stamina_waste() -> void:
 	if(player_data.current_velocity != 0):
 		player_data.current_velocity += 75
 
-func _on_life_time_left() -> void:
+func _on_lost() -> void:
+	lost.emit()
 	player_data.max_velocity = 0
 	player_data.steering_velocity = 0
 
-func _on_player_damaged(damage: float) -> void:
+func _on_player_is_damaged(damage: float) -> void:
+	player_is_damaged.emit()
 	player_data.stamina -= damage

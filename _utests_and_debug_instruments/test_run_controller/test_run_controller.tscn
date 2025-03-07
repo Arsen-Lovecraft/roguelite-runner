@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://bbn1ni4fjsagv"]
 
 [ext_resource type="TileSet" uid="uid://cwr71gvv4tmhb" path="res://_utests_and_debug_instruments/test_assets/2 Dungeon Tileset/1 Tiles/dungeon_tile_set.tres" id="1_4o6f5"]
-[ext_resource type="Script" path="res://scripts/core/run_controller.gd" id="1_xcjj7"]
+[ext_resource type="Script" uid="uid://kt5ppdfi5ssk" path="res://scripts/core/run_controller.gd" id="1_xcjj7"]
 [ext_resource type="PackedScene" uid="uid://bndhgm2h52r1u" path="res://scenes/level_run_obstacles/not_ai/ps_static_obstacle.tscn" id="2_6qc7v"]
 [ext_resource type="PackedScene" uid="uid://c0k8e67unybtf" path="res://scenes/level_run_obstacles/not_ai/ps_arrow_emitter.tscn" id="3_gwhrt"]
 [ext_resource type="PackedScene" uid="uid://dlobfbh10chdr" path="res://scenes/level_run_obstacles/ai/melee_ai/ps_melee_ai.tscn" id="4_jgem0"]
@@ -324,6 +324,6 @@ position = Vector2(126, -10102)
 [node name="PsPlayer" parent="TestLevel" instance=ExtResource("6_5e023")]
 
 [node name="WinArea" parent="TestLevel" instance=ExtResource("8_ualj2")]
-position = Vector2(102, -8460)
+position = Vector2(338, -1328)
 
 [node name="LevelRunHud" parent="." instance=ExtResource("9_6vkv0")]

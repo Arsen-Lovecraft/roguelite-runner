@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RDamageTrait" load_steps=2 format=3 uid="uid://fmw15toubp5r"]
+
+[ext_resource type="Script" uid="uid://by6y6jex5g0ry" path="res://scripts/traits/tr_dangerous_area.gd" id="1_rohe2"]
+
+[resource]
+script = ExtResource("1_rohe2")
+damage = 22.0
+metadata/_custom_type_script = "uid://by6y6jex5g0ry"

@@ -8,7 +8,7 @@ var _highest_speed: float = 300
 @onready var _speed_label: Label = %SpeedLabel
 @onready var _player_data: RPlayerData = preload("res://godot_resources/r_default_player_data.tres")
 @onready var max_speed_label: Label = %MaxSpeedLabel
-
+	
 func _physics_process(_delta: float) -> void:
 	_set_speed(10, _player_data.current_velocity)
 	_speedometr_arrow_texture_rect.rotation_degrees = _map_speed_to_rot_angle()  + randf_range(-3.0, 2.0)

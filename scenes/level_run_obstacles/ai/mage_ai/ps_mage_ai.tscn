@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://cgwtfr7ainwt5"]
 
-[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/mage_ai/ps_mage_ai.gd" id="1_ka7mb"]
+[ext_resource type="Script" uid="uid://ch2ucdu1fw78b" path="res://scenes/level_run_obstacles/ai/mage_ai/ps_mage_ai.gd" id="1_ka7mb"]
 [ext_resource type="Texture2D" uid="uid://b1iebairoj1lx" path="res://assets/mage_ai/down_idle.png" id="2_ejey5"]
 [ext_resource type="Texture2D" uid="uid://cuv051mxofxsj" path="res://assets/mage_ai/down_hurt.png" id="3_rp4gn"]
 [ext_resource type="Texture2D" uid="uid://wimjxy8dovy1" path="res://assets/mage_ai/down_death.png" id="4_1jw2e"]
 [ext_resource type="Texture2D" uid="uid://55wedhyvydm1" path="res://assets/mage_ai/down_attack.png" id="5_rurxg"]
-[ext_resource type="Script" path="res://scenes/level_run_obstacles/ai/mage_ai/mage_ai_animation_player.gd" id="6_8aj1v"]
+[ext_resource type="Script" uid="uid://bmp1015yebg31" path="res://scenes/level_run_obstacles/ai/mage_ai/mage_ai_animation_player.gd" id="6_8aj1v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4f1nj"]
 radius = 26.0768
@@ -214,11 +214,11 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kc065"]
 _data = {
-"RESET": SubResource("Animation_vxhyf"),
-"down_attack": SubResource("Animation_0tnes"),
-"down_death": SubResource("Animation_8sysl"),
-"down_hurt": SubResource("Animation_iqv8k"),
-"down_idle": SubResource("Animation_hup1l")
+&"RESET": SubResource("Animation_vxhyf"),
+&"down_attack": SubResource("Animation_0tnes"),
+&"down_death": SubResource("Animation_8sysl"),
+&"down_hurt": SubResource("Animation_iqv8k"),
+&"down_idle": SubResource("Animation_hup1l")
 }
 
 [node name="PsMageAi" type="Area2D"]
@@ -236,7 +236,7 @@ hframes = 4
 
 [node name="MageAIAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kc065")
+&"": SubResource("AnimationLibrary_kc065")
 }
 script = ExtResource("6_8aj1v")
 

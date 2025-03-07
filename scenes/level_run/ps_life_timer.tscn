@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://eqx8wa4t2lk7"]
 
-[ext_resource type="Script" path="res://scenes/level_run/ps_timer.gd" id="1_b3q4s"]
+[ext_resource type="Script" uid="uid://cbgchc8hksa04" path="res://scenes/level_run/ps_life_timer.gd" id="1_t6xuq"]
 
 [node name="PsTimer" type="Node"]
-script = ExtResource("1_b3q4s")
+script = ExtResource("1_t6xuq")
 
 [node name="TimeLeft" type="Timer" parent="."]
 unique_name_in_owner = true

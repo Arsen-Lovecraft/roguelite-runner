@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxhab8c7kiqhi"]
 
-[ext_resource type="Script" path="res://scenes/ui/ps_timer_ui.gd" id="1_eqvgo"]
+[ext_resource type="Script" uid="uid://fmk84tlb2vhy" path="res://scenes/ui/ps_timer_ui.gd" id="1_eqvgo"]
 
 [node name="PsTimerUi" type="Control"]
 layout_mode = 3

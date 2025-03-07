@@ -6,7 +6,7 @@ extends Area2D
 
 var velocity: float = 0.0
 
-@onready var damage_trait: RDamageTrait = RDamageTrait.new().duplicate()
+@onready var damage_trait: RDamageTrait = preload("res://godot_resources/damage_traits/melee_ai_damage_trait.tres")
 
 func _ready() -> void:
 	velocity = speed
@@ -31,6 +31,4 @@ func _handle_move(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if(body is Player):
 		damage_trait.player_damaged.emit(damage_trait.damage)
-		##TODO Decouple
-		EventBus.player_damaged.emit(damage_trait.damage)
 		queue_free()
